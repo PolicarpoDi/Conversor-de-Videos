@@ -1,9 +1,6 @@
 # OS, sys, fnmatch - Convertendo videos com Python - FFMPEG
 # https://ffmpeg.zeranoe.com/builds/
 
-"""
-ffmpeg -i "ENTRADA" -i "LEGENDA" -c:v libx264 -crf 23 -preset ultrafast -c:a aac-b:a 320k -c:s srt -map v:0 -map a -map 1:0 "SAIDA"
-"""
 
 import os
 import fnmatch
@@ -21,8 +18,8 @@ preset = '-preset ultrafast'
 bitrate_audio = '-b:a 320k'
 debug = '-ss 00:00:00 -to 00:00:10'
 
-caminho_origem = '/home/diegopolicarpo/Estudos/Python/Udemy/Python_3_do_basico_ao_avancado/POO/aula136/videos'
-caminho_destino = '/home/diegopolicarpo/Estudos/Python/Udemy/Python_3_do_basico_ao_avancado/POO/aula136/saida'
+caminho_origem = 'caminho de origem'
+caminho_destino = 'caminho de saida'
 
 for raiz, pastas, arquivos in os.walk(caminho_origem):
     for arquivo in arquivos:
